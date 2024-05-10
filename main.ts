@@ -3,8 +3,8 @@ function Mr_Walkers_Class () {
     Forward__Speed__Time_s(50, 6)
     Turn_Left__Time_s(1)
     Forward__Speed__Time_s(60, 6)
-    Turn_Right__Time_s(0.2)
-    Forward__Speed__Time_s(60, 3.5)
+    Turn_Right__Time_s(1)
+    Forward__Speed__Time_s(60, 1)
 }
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
