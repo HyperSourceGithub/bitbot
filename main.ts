@@ -19,8 +19,12 @@ radio.onReceivedNumber(function (receivedNumber) {
                 if (receivedNumber == 0) {
                     cakLandMotor.stop()
                 } else {
-                    for (let index = 0; index < 2; index++) {
-                        music.play(music.tonePlayable(262, music.beat(BeatFraction.Breve)), music.PlaybackMode.UntilDone)
+                    if (receivedNumber == -1) {
+                        cakLandMotor.drive(-100, -100)
+                    } else {
+                        for (let index = 0; index < 2; index++) {
+                            music.play(music.tonePlayable(262, music.beat(BeatFraction.Breve)), music.PlaybackMode.UntilDone)
+                        }
                     }
                 }
             }
